@@ -1,0 +1,14 @@
+<div class = "col-lg-10" >
+    <div class = "card-rounded-0 shadow mt-5 mb-5 p-3">
+        <div class = "card-body" >
+<p><%= notice %></p>
+<h4>id : <%= @student.id %></h4>
+<p>first name : <%= @student.first_name%></p>
+<p>Last Name : <%= @student.last_name%></p>
+<p>Email : <%= @student.email%></p>
+<p>DOB: <%= @student.date_of_birth %></p>
+<p>Contact :<%= @student.contact%></p>
+<p>Address : <%= @student.address%></p>
+<%= link_to 'back', students_path, class: "btn btn-primary" %> <%= link_to 'edit', edit_student_path ,class: "btn btn-primary"%>
+</div>
+</div>

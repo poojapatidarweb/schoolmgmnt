@@ -1,0 +1,40 @@
+<%= form_with model: @student do |form| %>
+    <% if @student.errors.any? %>
+        <% @student.errors.full_messages.each do |message| %>
+            <p><%= message %></p>
+        <% end %>
+    <% end %>
+    <div class = "form-group">
+        <%= form.label :first_name %><br>
+        <%= form.text_field :first_name , class: "form-control form-control-lg" %>
+    </div>
+    <br>
+    <div class = "form-group">
+        <%= form.label :last_name %><br>
+        <%= form.text_field :last_name, class: "form-control form-control-lg" %>
+    </div>
+    <br>
+    <div class = "form-group">
+        <%= form.label :email %><br>
+        <%= form.email_field :email, class: "form-control form-control-lg" %>
+    </div>
+    <br>
+    <div class = "form-group">
+        <%= form.label :date_of_birth %><br>
+        <%= form.text_field :date_of_birth , class: "form-control form-control-lg" %>
+    </div>
+    <br>
+    <div class = "form-group">
+        <%= form.label :address %><br>
+        <%= form.text_field :address , class: "form-control form-control-lg" %>
+    </div>
+    <br>
+    <div class = "form-group">
+        <%= form.label :contact %><br>
+        <%= form.text_field :contact, class: "form-control form-control-lg" %>
+    </div>
+    <br>
+    <div class = "form-group">
+        <%= form.submit "create student", class: "btn btn-primary btn-lg" %>
+    </div>
+<% end %>
