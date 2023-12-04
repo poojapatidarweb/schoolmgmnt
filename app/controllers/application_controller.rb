@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :print_message
+  before_action :authenticate_user!
 
   private
 

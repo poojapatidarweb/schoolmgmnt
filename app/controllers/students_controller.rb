@@ -3,7 +3,7 @@ class StudentsController < ApplicationController
 
   def index
     @q = Student.ransack(params[:q])
-    @students = @q.result.order(:id).page(params[:page]).per(params[:no_of_elements])
+    @students = @q.result.order(:id).page(params[:page]).per(3)
   end
 
   def new
@@ -27,15 +27,17 @@ class StudentsController < ApplicationController
 
   def update
     if @student.update(student_param)
-      redirect_to student_path(@student), notice: 'Student has been updated successfully'
+      flash[:notice] = 'Student has been updated successfully'
+      redirect_to action: :index
     else
       render :edit, status: 404
     end
   end
 
   def destroy
+    debugger
     @student.destroy
-    redirect_to students_path, status: :see_other, notice: 'Student has been deleted successfully'
+    redirect_to root_path, status: :see_other, notice: 'Student has been deleted successfully'
   end
 
   private
