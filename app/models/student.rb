@@ -4,7 +4,7 @@ class Student < ApplicationRecord
   has_many :student_curriculums, dependent: :destroy
   has_many :curriculums, through: :student_curriculums
   validates :first_name, :last_name, :email, presence: true
-
+  has_one_attached :profile_pic
   def self.ransackable_attributes(_auth_object = nil)
     %w[first_name]
   end

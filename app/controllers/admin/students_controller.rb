@@ -1,4 +1,2 @@
-class Admin: :StudentsController < ApplicationController
-  #TODO implement CRUD later
-  
+class Admin::StudentsController < ApplicationController
 end

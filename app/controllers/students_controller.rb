@@ -45,6 +45,6 @@ class StudentsController < ApplicationController
     @student = Student.find(params[:id])
   end
   def student_param
-    params.require(:student).permit(:first_name, :last_name, :email, :address, :contact ,:date_of_birth)
+    params.require(:student).permit(:first_name, :last_name, :email, :address, :contact ,:date_of_birth, :profile_pic)
   end
 end

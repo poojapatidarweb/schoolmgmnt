@@ -1,0 +1,49 @@
+.rounded-profile{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px; 
+}
+.pagination{
+    display: flex;
+    color: black;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    margin-top: 15px;
+    text-decoration: none;
+    border: 0.5px solid black;
+    background-color: aqua;
+}
+.page{
+    transition: .5s;
+    margin-right: 10px;
+    border: 0.5px solid black;
+    padding: 5px 15px 5px 15px ;
+    border-radius: 50%;
+    background-color: rgb(138, 211, 169);
+    text-decoration: none;
+}
+.first, .prev, .next, .last{
+    transition: .5s;
+    margin-right: 10px;
+    border: 0.5px solid black;
+    padding: 5px 15px 5px 15px ;
+    border-radius: 50%;
+    background-color: rgb(13, 189, 86);
+    text-decoration: none;
+}
+.pagination a{
+    text-decoration: none;
+}
+.page.current{
+    color: rgb(230, 221, 221);
+    background-color: rgb(165, 42, 142);
+}
+.search-field{
+    height: 35px;
+}
+.search-button{
+    height: 35px;
+    background-color: aquamarine;
+}
