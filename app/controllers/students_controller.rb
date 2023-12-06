@@ -1,6 +1,6 @@
 class StudentsController < ApplicationController
   before_action :set_student, only: %i[show edit update destroy]
-
+  authorize_resource
   def index
     @q = Student.ransack(params[:q])
     @students = @q.result.order(:id).page(params[:page]).per(3)
@@ -35,7 +35,7 @@ class StudentsController < ApplicationController
   end
 
   def destroy
-    debugger
+    # debugger
     @student.destroy
     redirect_to root_path, status: :see_other, notice: 'Student has been deleted successfully'
   end

@@ -70,3 +70,4 @@ end
 gem 'kaminari'
 gem 'ransack'
 gem 'devise'
+gem 'cancancan'
